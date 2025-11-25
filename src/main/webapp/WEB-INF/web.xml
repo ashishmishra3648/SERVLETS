@@ -8,4 +8,12 @@
   	<servlet-name>message</servlet-name>
   	<url-pattern>/message</url-pattern>
   	</servlet-mapping>
+  	<servlet>
+  	<servlet-name>addition</servlet-name>
+  	<servlet-class>servletClass.addition</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+  	<servlet-name>addition</servlet-name>
+  	<url-pattern>/addition</url-pattern>
+  	</servlet-mapping>
 </web-app>
