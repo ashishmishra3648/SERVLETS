@@ -8,7 +8,7 @@ Java Servlets are the Java programs that run on the web server or application se
 -	Produce the response
 -	Send a response back to the web server
 
-### index.html:
+## index.html:
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +24,7 @@ Java Servlets are the Java programs that run on the web server or application se
 </body>
 </html>
 
-
-
-
-
-### Message.java:
+## Message.java:
 package servletClass;
 
 import java.io.IOException;
