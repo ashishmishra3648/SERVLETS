@@ -22,5 +22,13 @@ public class Request_Dispatcher1 extends HttpServlet{
 		
 		RequestDispatcher rd=req.getRequestDispatcher("Request_Dispatcher2");
 		rd.forward(req, res);
+		//rd.include(req, res);
 	}
 }
+
+// In forward method request is sent from user to Servlet1 and Servlet1 sends this request to Servlet2
+// then Servlet2 sends response to the user.
+
+// In include method request is sent from user to Servlet1 and Servlet1 sends this request to Servlet2
+// but here Servlet2 sends response to Servlet1 and Servlet1 sends this response to the user.
+// Basically,Servlet2 is not directly sending the response to the user.
