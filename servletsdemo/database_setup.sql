@@ -15,12 +15,13 @@ DROP TABLE IF EXISTS student1;
 CREATE TABLE student1 (
     id INTEGER PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    age INTEGER NOT NULL
+    age INTEGER NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(50) NOT NULL
 );
 
 -- Verify table creation
 SELECT * FROM student1;
 
 -- Sample insert (optional - for testing)
--- INSERT INTO student1 (id, name, age) VALUES (1, 'John Doe', 20);
--- INSERT INTO student1 (id, name, age) VALUES (2, 'Jane Smith', 22);
+-- INSERT INTO student1 (id, name, age, username, password) VALUES (1, 'John Doe', 20, 'john', '123');
