@@ -24,7 +24,7 @@ public class Service {
 
 	public int save(Student st) {
 		int res = 0;
-		String sql = "INSERT into student1(id, name, age) values(?,?,?)";
+		String sql = "INSERT into student1(id, name, age, username, password) values(?,?,?,?,?)";
 		
 		try (Connection connection = getConnection();
 		     PreparedStatement preparedstatement = connection.prepareStatement(sql)) {
@@ -32,6 +32,8 @@ public class Service {
 			preparedstatement.setInt(1, st.getId());
 			preparedstatement.setString(2, st.getName());
 			preparedstatement.setInt(3, st.getAge());
+			preparedstatement.setString(4, st.getUsername());
+			preparedstatement.setString(5, st.getPassword());
 			res = preparedstatement.executeUpdate();
 			
 		} catch (SQLException e) {
