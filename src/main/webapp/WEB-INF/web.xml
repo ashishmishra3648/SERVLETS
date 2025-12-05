@@ -1,19 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  	<servlet>
-  	<servlet-name>message</servlet-name>
-  	<servlet-class>servletClass.message</servlet-class>
-  	</servlet>
-  	<servlet-mapping>
-  	<servlet-name>message</servlet-name>
-  	<url-pattern>/message</url-pattern>
-  	</servlet-mapping>
-  	<servlet>
-  	<servlet-name>addition</servlet-name>
-  	<servlet-class>servletClass.addition</servlet-class>
-  	</servlet>
-  	<servlet-mapping>
-  	<servlet-name>addition</servlet-name>
-  	<url-pattern>/addition</url-pattern>
-  	</servlet-mapping>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+  <display-name>Servlets Demo</display-name>
+  
+  <!-- Circle Servlet -->
+  <servlet>
+    <servlet-name>AreaServlet</servlet-name>
+    <servlet-class>servletsdemo.AreaOfCircle</servlet-class>
+    <init-param>
+      <param-name>pi</param-name>
+      <param-value>3.14159</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AreaServlet</servlet-name>
+    <url-pattern>/area</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Triangle Servlet -->
+  <servlet>
+    <servlet-name>TriangleServlet</servlet-name>
+    <servlet-class>servletsdemo.AreaOfTriangle</servlet-class>
+    <init-param>
+      <param-name>constant</param-name>
+      <param-value>0.5</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TriangleServlet</servlet-name>
+    <url-pattern>/triangle</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Ellipse Servlet -->
+  <servlet>
+    <servlet-name>EllipseServlet</servlet-name>
+    <servlet-class>servletsdemo.AreaOfEllipse</servlet-class>
+    <init-param>
+      <param-name>pi</param-name>
+      <param-value>3.14159</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>EllipseServlet</servlet-name>
+    <url-pattern>/ellipse</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Semi-Circle Servlet -->
+  <servlet>
+    <servlet-name>SemiCircleServlet</servlet-name>
+    <servlet-class>servletsdemo.AreaOfSemiCircle</servlet-class>
+    <init-param>
+      <param-name>pi</param-name>
+      <param-value>3.14159</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SemiCircleServlet</servlet-name>
+    <url-pattern>/semicircle</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Trapezium Servlet -->
+  <servlet>
+    <servlet-name>TrapeziumServlet</servlet-name>
+    <servlet-class>servletsdemo.AreaOfTrapezium</servlet-class>
+    <init-param>
+      <param-name>constant</param-name>
+      <param-value>0.5</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TrapeziumServlet</servlet-name>
+    <url-pattern>/trapezium</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Parallelogram Servlet -->
+  <servlet>
+    <servlet-name>ParallelogramServlet</servlet-name>
+    <servlet-class>servletsdemo.AreaOfParallelogram</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ParallelogramServlet</servlet-name>
+    <url-pattern>/parallelogram</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>circle.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
